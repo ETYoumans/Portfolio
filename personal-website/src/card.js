@@ -9,12 +9,14 @@ const Project = ({
     link
 }) => {
     return (
-        <div className="project">
+        <a href={link} className="project">
+            <img src={image} className="project-image" />
             <div className="project-info">
-                <h3 div className="title">{title}</h3>
-                <p className="description">{description}</p>
+                <div className="title">{title}</div>
+                <div className="description">{description}</div>
+                
             </div>
-        </div>
+        </a>
     );
 }
 
