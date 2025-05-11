@@ -1,6 +1,7 @@
 import './App.css';
-import Project from './card.js'
-import sudokuImage from './sudoku.png';
+
+import ProjectList from './projectList.js';
+import Cat from './cat.js';
 
 function App() {
   return(
@@ -22,20 +23,7 @@ function App() {
       <h3>
           Projects
       </h3>
-      <div className="project-list">
-        <Project
-          title = "Sudoku Coloring"
-          image = {sudokuImage}
-          description = "Solving Sudoku puzzles with custom algorithms that leveraging graph theory and coloring in Python"
-          link = "https://github.com/ETYoumans/SudokuColoring"
-        />
-        <Project
-          title = "Sudoku Coloring"
-          image = {sudokuImage}
-          description = "Solving Sudoku puzzles with custom algorithms that leveraging graph theory and coloring in Python"
-          link = "https://github.com/ETYoumans/SudokuColoring"
-        />
-      </div>
+      <ProjectList />
 
       <div className="hr-bar"></div>
 
@@ -60,7 +48,7 @@ function App() {
         </h3>
       </div>
 
-
+      <Cat />
     </div>
 
 
