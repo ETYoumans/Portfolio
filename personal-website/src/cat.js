@@ -82,15 +82,15 @@ const Cat = () => {
     const platformRightPx = 3 * vwToPx - (SCALE*0.9);
     const K = SCALE * 20;
     let catOffsetRight;
-    if (sprites.color) {
+    if (sprites.color === true) {
         catOffsetRight = direction.current === 'left'
         ? (platformRightPx + platformWidthPx - (FRAME_WIDTH * SCALE * 1.02))
         : (platformRightPx - (FRAME_WIDTH * SCALE * 0.24));
     }
     else {
         catOffsetRight = direction.current === 'left'
-        ? (platformRightPx + platformWidthPx - (FRAME_WIDTH * SCALE))
-        : (platformRightPx - (FRAME_WIDTH * SCALE * 0.25));
+        ? (platformRightPx + platformWidthPx - (FRAME_WIDTH * SCALE * 0.935))
+        : (platformRightPx - (FRAME_WIDTH * SCALE * 0.31));
     }
 
     return (
