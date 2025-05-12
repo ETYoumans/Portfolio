@@ -28,9 +28,9 @@ const Cat = () => {
     const [scale, setScale] = useState(getResponsiveScale());
 
     function getResponsiveScale() {
-        const baseScale = 4;
-        const minScale = 2;
-        const minWidth = 320;
+        const baseScale = 5;
+        const minScale = 1.5;
+        const minWidth = 540;
         const maxWidth = 1200;
 
         const clampedWidth = Math.max(minWidth, Math.min(window.innerWidth, maxWidth));
@@ -90,7 +90,7 @@ const Cat = () => {
             setVwToPx(currentWindowWidth / 100);
             setScale(newScale);
 
-            let feetCenter = sprites.color ? 21 : 0;
+            let feetCenter = sprites.color ? 21 : 20;
 
             feetCenter = direction.current === 'left' 
                 ? FRAME_WIDTH - feetCenter : feetCenter;
