@@ -6,14 +6,10 @@ import Cat from './cat.js';
 import SudokuColoring from './pages/SudokuColoring.js'
 import AutoCatan from './pages/AutoCatan.js'
 
-const pageFiles = require.context('./pages', false, /\.js$/);
-
-const pages = pageFiles.keys().reduce((acc, filePath) => {
-  const pageName = filePath.replace('./', '').replace('.js', '');
-  const PageComponent = pageFiles(filePath).default;
-  acc[pageName] = PageComponent;
-  return acc;
-}, {});
+const pages = {
+  SudokuColoring,
+  AutoCatan,
+};
 
 function App() {
   return(
@@ -89,6 +85,7 @@ function App() {
             element={React.createElement(pages[pageName])}
           />
         ))}
+        <Route path="*" element={<div>404 – Page Not Found</div>} />
     </Routes>
     </Router>
 
