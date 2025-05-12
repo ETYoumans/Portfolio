@@ -90,10 +90,11 @@ const Cat = () => {
             setVwToPx(currentWindowWidth / 100);
             setScale(newScale);
 
-            let feetCenter = sprites.color ? 19 : 0;
+            let feetCenter = sprites.color ? 21 : 0;
 
             feetCenter = direction.current === 'left' 
                 ? FRAME_WIDTH - feetCenter : feetCenter;
+            
 
             let feetCenterOffsetScaled = feetCenter * newScale;
 
@@ -102,12 +103,13 @@ const Cat = () => {
             const catWidthPx = FRAME_WIDTH * newScale;
 
             setPlatformWidthPx(catWidthPx);
-            setPlatformRightPx(rightInsetPx)
+            setPlatformRightPx(rightInsetPx);
 
             const platformCenterPx = rightInsetPx + (catWidthPx / 2);
-            const catOffsetAdjustment = ((currentWindowWidth / 100)*1.5)/2.5 * newScale;
+            const catOffsetRight = platformCenterPx - (catWidthPx - feetCenterOffsetScaled)
+            const catOffsetAdjustment = (FRAME_WIDTH*(newScale - 1)) / 2
 
-            setCatOffsetRight(platformCenterPx - feetCenterOffsetScaled + catOffsetAdjustment);
+            setCatOffsetRight(catOffsetRight + catOffsetAdjustment);
         };
 
         handleResize();
@@ -127,7 +129,7 @@ const Cat = () => {
         };
     }, [isWalking]);
 
-
+    //translateX(-${FRAME_WIDTH}px) 
     return (
     <>
     <div
@@ -155,8 +157,8 @@ const Cat = () => {
         imageRendering: 'pixelated',
         
         transform: `
-        ${direction.current === 'left' ? `translateX(-${FRAME_WIDTH}px) scaleX(-1)` : ''}
-        scale(${scale})
+         scaleX(${direction.current === 'left' ? -1 : 1})
+         scale(${scale})
         `,
         transformOrigin: 'bottom center',
         zIndex: 999
