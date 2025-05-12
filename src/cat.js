@@ -10,7 +10,7 @@ const IDLE_COUNT = 4;
 const IDLE_SPEED = 200;
 const WALK_COUNT = 6;
 const WALK_SPEED = 100;
-const SCALE = 4;
+//let SCALE = 4;
 
 const Cat = () => {
     const [frame, setFrame] = useState(0);
@@ -20,6 +20,23 @@ const Cat = () => {
     const direction = useRef('right');
     const animating = useRef(false);
     const walkingTimer = useRef(null);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [platformRightPx, setPlatformRightPx] = useState(0);
+    const [platformWidthPx, setPlatformWidthPx] = useState(0);
+    const [catOffsetRight, setCatOffsetRight] = useState(0);
+
+    const [scale, setScale] = useState(getResponsiveScale());
+
+    function getResponsiveScale() {
+        const baseScale = 4;
+        const minScale = 2;
+        const minWidth = 320;
+        const maxWidth = 1200;
+
+        const clampedWidth = Math.max(minWidth, Math.min(window.innerWidth, maxWidth));
+        const scale = baseScale * ((clampedWidth - minWidth) / (maxWidth - minWidth));
+        return Math.max(minScale, scale);
+    }
 
     const sprites = useRef(
             Math.random() <= 0.90
@@ -65,6 +82,36 @@ const Cat = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
+
+        const handleResize = () => {
+            const newScale = getResponsiveScale();
+            const currentWindowWidth = window.innerWidth;
+            setWindowWidth(currentWindowWidth);
+            setVwToPx(currentWindowWidth / 100);
+            setScale(newScale);
+
+            let feetCenter = sprites.color ? 19 : 0;
+
+            feetCenter = direction.current === 'left' 
+                ? FRAME_WIDTH - feetCenter : feetCenter;
+
+            let feetCenterOffsetScaled = feetCenter * newScale;
+
+            const rightInsetPercent = 3;
+            const rightInsetPx = (currentWindowWidth * rightInsetPercent) / 100;
+            const catWidthPx = FRAME_WIDTH * newScale;
+
+            setPlatformWidthPx(catWidthPx);
+            setPlatformRightPx(rightInsetPx)
+
+            const platformCenterPx = rightInsetPx + (catWidthPx / 2);
+            const catOffsetAdjustment = ((currentWindowWidth / 100)*1.5)/2.5 * newScale;
+
+            setCatOffsetRight(platformCenterPx - feetCenterOffsetScaled + catOffsetAdjustment);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
         
         idleInterval = setInterval(() => {
             if (!isWalking) {
@@ -74,34 +121,22 @@ const Cat = () => {
     
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
             clearInterval(idleInterval);
+            clearTimeout(walkingTimer.current);
         };
     }, [isWalking]);
 
-    const platformWidthPx = 14 * vwToPx;
-    const platformRightPx = 3 * vwToPx - (SCALE*0.9);
-    const K = SCALE * 20;
-    let catOffsetRight;
-    if (sprites.color === true) {
-        catOffsetRight = direction.current === 'left'
-        ? (platformRightPx + platformWidthPx - (FRAME_WIDTH * SCALE * 1.02))
-        : (platformRightPx - (FRAME_WIDTH * SCALE * 0.24));
-    }
-    else {
-        catOffsetRight = direction.current === 'left'
-        ? (platformRightPx + platformWidthPx - (FRAME_WIDTH * SCALE * 0.935))
-        : (platformRightPx - (FRAME_WIDTH * SCALE * 0.31));
-    }
 
     return (
     <>
     <div
         style={{
           position: 'fixed',
-          bottom: '0vh',
+          bottom: '0px',
           right: `${platformRightPx}px`,
           width: `${platformWidthPx}px`,
-          height: `${FRAME_HEIGHT * SCALE * 0.1}px`,
+          height: `${FRAME_HEIGHT * scale * 0.1}px`,
           backgroundColor: '#2c2c2c',
           zIndex: 998
         }}
@@ -109,7 +144,7 @@ const Cat = () => {
     <div
       style={{
         position: 'fixed',
-        bottom: `${FRAME_HEIGHT * SCALE * 0.1}px`,
+        bottom: `${FRAME_HEIGHT * scale * 0.1}px`,
         right: `${catOffsetRight}px`,
         width: `${FRAME_WIDTH}px`,
         height: `${FRAME_HEIGHT}px`,
@@ -118,8 +153,12 @@ const Cat = () => {
         backgroundRepeat: 'no-repeat',
         backgroundSize: `${FRAME_WIDTH * (isWalking ? WALK_COUNT : IDLE_COUNT)}px ${FRAME_HEIGHT}px`,
         imageRendering: 'pixelated',
-        transform: `${direction.current === 'left' ? 'scaleX(-1)' : 'scaleX(1)'} scale(${SCALE}) `,
-        transformOrigin: direction.current === 'left' ? 'bottom left' : 'bottom right',
+        
+        transform: `
+        ${direction.current === 'left' ? `translateX(-${FRAME_WIDTH}px) scaleX(-1)` : ''}
+        scale(${scale})
+        `,
+        transformOrigin: 'bottom center',
         zIndex: 999
       }}
     />
