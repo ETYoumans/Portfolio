@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectList from './projectList.js';
 import Cat from './cat.js';
 import SudokuColoring from './pages/SudokuColoring.js'
