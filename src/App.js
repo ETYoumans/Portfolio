@@ -14,7 +14,9 @@ const pages = {
 function App() {
   return(
     <Router>
-    <Cat />
+      <a href="https://github.com/ETYoumans/CornerCat/tree/main">
+        <Cat />
+      </a>
     <Routes>
       
       <Route path="/" element={
