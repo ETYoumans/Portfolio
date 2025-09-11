@@ -1,0 +1,26 @@
+.foot {
+    position: fixed;
+    bottom: 0;
+    width:100vw;
+    height:8vh;
+    background-color:#0F2757;
+    z-index: 900;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  z-index: 999;
+}
+
+img {
+    height: 5vh;;
+    width: auto;
+}
+
+img:hover {
+    transform: translateY(-2px);
+}

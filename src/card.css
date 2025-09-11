@@ -1,18 +1,16 @@
 .project {
-  max-width: 600px;
-  border-radius: 12px;
+  width: 75vw;
+  border-radius: 36px;
   overflow: hidden;
   margin: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
   gap: 16px;
-  background-color: #E2D3B6;
+  background-color: #EBE9E9;
   padding: 0px;
-  border: 2px solid #2C2C2C;
   transition: transform 0.3s ease-in-out;
-  box-shadow: 3px 3px 0px #5C5c5c;
-}
+  }
 
 .project:hover {
   transform: scale(1.05);

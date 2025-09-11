@@ -133,20 +133,9 @@ const Cat = () => {
     return (
     <>
     <div
-        style={{
-          position: 'fixed',
-          bottom: '0px',
-          right: `${platformRightPx}px`,
-          width: `${platformWidthPx}px`,
-          height: `${FRAME_HEIGHT * scale * 0.1}px`,
-          backgroundColor: '#2c2c2c',
-          zIndex: 998
-        }}
-    />
-    <div
       style={{
         position: 'fixed',
-        bottom: `${FRAME_HEIGHT * scale * 0.1}px`,
+        bottom: `8vh`,
         right: `${catOffsetRight}px`,
         width: `${FRAME_WIDTH}px`,
         height: `${FRAME_HEIGHT}px`,
