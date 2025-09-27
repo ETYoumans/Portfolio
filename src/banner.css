@@ -1,0 +1,83 @@
+
+.banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #0a1a3f;
+  color: #fff;
+  position: relative;
+
+}
+
+.banner-content {
+  max-width: 800px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.banner-name {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-tagline {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #b0c7ff;
+}
+
+.banner-buzzwords {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  color: #d4d4d4;
+}
+
+
+.banner-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.banner-button:hover {
+  background-color: #fff;
+  color: #0a1a3f;
+}
+
+.skyline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* occupy half of the banner */
+  display: flex;
+  align-items: flex-end;
+  z-index: 0;
+}
+
+.building {
+  background: #11002c;
+  position: relative;
+  flex-shrink: 0; /* prevent squeezing */
+}
+
+.building::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 6px; 
+  background: inherit;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+

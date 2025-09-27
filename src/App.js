@@ -1,35 +1,43 @@
 import './App.css';
 import Cat from './cat.js';
 import Foot from './foot.js';
-import Skyline from './imgs/skyline.png'
+import Banner from './banner.js';
+import AboutMe from './aboutme.js';
+import ProjectsCarousel from './projectlist.js';
+import Skills from './skills.js';
+import FeaturedProject from './feature.js';
+import Rain from './rain.js';
 
 
 function App() {
   return(
     <div className="body">
-      <div className="top">
-        <h1>
-          ETHAN YOUMANS
-        </h1>
-        <h2>
-          OVERLY CONFIDENT PROGRAMMER
-        </h2>
-        <h4>
-          SOME BUZZ WORDS
-        </h4>
-      </div>
-      
-      <div className="about-me">
-        
-      </div>
-      
+
+      <Rain />
+      <Rain />
+
+      <Banner />
+
+      <AboutMe />
+
+      <FeaturedProject />
+
+      <ProjectsCarousel />
+
+      <Skills />
+
+      <div className="spacer" />
+ 
       <Foot />
       <a href="https://github.com/ETYoumans/CornerCat/tree/main"><Cat /></a>
 
-      <div className="spacer"></div>
-    
+      
+      
+      
+
     </div>
 
+    
     
 
   );
