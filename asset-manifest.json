@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.32d35bf0.css",
+    "main.js": "/static/js/main.6a0dd285.js",
+    "static/media/4by4.gif": "/static/media/4by4.f83822c9cc5cfdd39e44.gif",
+    "static/media/autocatan.jpg": "/static/media/autocatan.3f1fa4f9db84f2d11144.jpg",
+    "static/media/tree.png": "/static/media/tree.d135d7f6f5cef45629f3.png",
+    "index.html": "/index.html",
+    "main.32d35bf0.css.map": "/static/css/main.32d35bf0.css.map",
+    "main.6a0dd285.js.map": "/static/js/main.6a0dd285.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32d35bf0.css",
+    "static/js/main.6a0dd285.js"
+  ]
+}
