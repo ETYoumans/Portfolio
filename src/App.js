@@ -1,5 +1,4 @@
 import './App.css';
-import ProjectList from './projectList.js';
 import Cat from './cat.js';
 import Foot from './foot.js';
 import Skyline from './imgs/skyline.png'
@@ -19,9 +18,6 @@ function App() {
           SOME BUZZ WORDS
         </h4>
       </div>
-      
-      <ProjectList />
-      
       
       <div className="about-me">
         
