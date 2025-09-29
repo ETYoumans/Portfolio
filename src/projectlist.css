@@ -110,6 +110,7 @@
   .slick-slide > div {
     height: auto !important;
     min-height: 400px;
+
   }
 
   .project-content {
@@ -120,7 +121,11 @@
   }
 
   .project-media {
-    max-width: 100%;
+    width: 90%;
+    padding: 4px;
+    max-height: 500px;
+    justify-content: center;
+    object-fit: contain;
     height: auto;
   }
 
@@ -128,6 +133,13 @@
     max-height: none;
     overflow: visible;
     padding-top: 16px;
-    text-align: center;
+    text-align: left;
+  }
+
+  .project-media img,
+  .project-media video {
+    width: auto;
+    height: 100%;
+    align-self: center;
   }
 }

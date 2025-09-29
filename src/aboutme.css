@@ -5,6 +5,8 @@
   align-items: center;
   background-color: #11002c; 
   padding-top: 60px;
+  margin: 0 10px;
+  align-items: center;
   
 }
 
@@ -28,4 +30,12 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
+}
+
+@media (max-width: 700px){
+  .about-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
 }
