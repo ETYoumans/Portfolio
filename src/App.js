@@ -19,12 +19,14 @@ function App() {
       <Banner />
 
       <AboutMe />
-
-      <FeaturedProject />
+      <Skills />
+     
 
       <ProjectsCarousel />
 
-      <Skills />
+       <FeaturedProject />
+
+      
 
       <div className="spacer" />
  

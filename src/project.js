@@ -12,6 +12,15 @@ function Project({ title, tech, description, media, github, demo, reverse }) {
           <p>
             {description}
           </p>
+          
+          <ul className="project-tags">
+            <li>{tech[0]}</li>
+            <li>{tech[1]}</li>
+            <li>{tech[2]}</li>
+          </ul>
+
+
+          
           <div className="project-buttons">
             <a href={github} target="_blank" rel="noreferrer">
               <button>View on GitHub</button>

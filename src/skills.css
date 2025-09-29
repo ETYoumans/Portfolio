@@ -4,8 +4,13 @@
   background-color: #11002c; 
   color: white;
   text-align: center;
-  margin-top: 80px;
+  margin: 20px;
 }
+
+.skill-card h3 {
+  color: #000;
+}
+
 
 .skills-title {
   font-size: 2rem;
@@ -22,8 +27,7 @@
 }
 
 .skill-card {
-  background: #0a1a3f;
-  border: 3px solid #ff914d; 
+  background: #FFFBEC;
   border-radius: 12px;
   padding: 1.5rem;
   width: 280px;
@@ -33,7 +37,7 @@
 
 .skill-card:hover {
   transform: scale(1.05);
-  background: #343a66;
+  background: #F7EFD2;
 }
 
 @media (max-width: 768px) {
