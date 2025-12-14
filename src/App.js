@@ -26,6 +26,7 @@ function App() {
 
 
       
+      <div className="spacer" />
       <Foot />
       <a href="https://github.com/ETYoumans/CornerCat/tree/main"><Cat /></a>
 

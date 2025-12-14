@@ -83,27 +83,36 @@
     .bio {
         width: 90vw;
         padding: 0 1rem;
+        flex-direction: column;
     }
 
     .bio-intro {
         flex-direction: column;
+        order: 1;
     }
 
     .bio-photo-placeholder {
         width: 100%;
         max-width: 320px;
         height: 260px;
+        margin: 0 auto;
+        order: 2;
+    }
+
+    .bio-text {
+        order: 1;
     }
 
     .bio-personal {
         flex-direction: column;
+        order: 3;
     }
 
     .bio-personal-images {
         width: 100%;
         max-width: 320px;
-        flex-direction: row;
-        gap: 0.75rem;
+        margin: 0 auto;
+        order: 4;
     }
 
     .bio-cat-frame {

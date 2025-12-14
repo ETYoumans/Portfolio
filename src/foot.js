@@ -2,6 +2,7 @@ import "./css/foot.css";
 import GitHubLogo from "./imgs/github_logo.png";
 import LinkedInLogo from "./imgs/linkedin_logo.png";
 import EmailLogo from "./imgs/email.png";
+import ResumeLogo from "./imgs/resume_icon.png";
 import Info from "./info.json"
 
 function Foot() {
@@ -16,6 +17,9 @@ function Foot() {
             </a>
             <a href={Info.basics.email}>
                 <img src={EmailLogo} alt="Email" />
+            </a>
+            <a href={Info.basics.resume} download="YoumansEthanResume.pdf">
+                <img src={ResumeLogo} alt="Resume" />
             </a>
         </div>
     </div>

@@ -29,7 +29,7 @@ const Cat = () => {
 
     function getResponsiveScale() {
         const baseScale = 5;
-        const minScale = 1.5;
+        const minScale = 3.0;
         const minWidth = 540;
         const maxWidth = 1200;
 
