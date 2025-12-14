@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import walkSprite1 from './cat/Walk.png';
-import idleSprite1 from './cat/Idle.png'
-import walkSprite2 from './cat/Walk2.png';
-import idleSprite2 from './cat/Idle2.png'
+import walkSprite1 from './Walk.png';
+import idleSprite1 from './Idle.png'
+import walkSprite2 from './Walk2.png';
+import idleSprite2 from './Idle2.png'
 
 const FRAME_WIDTH = 48;
 const FRAME_HEIGHT = 48;

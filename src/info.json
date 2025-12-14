@@ -1,0 +1,52 @@
+{
+    "basics": {
+        "name": "Ethan Youmans",
+        "title": "Overly Confident Programmer",
+        "subtitle": "System Architecture • Applied Algorithms • OOP • Full-Stack Development • ML",
+        "email": "mailto:ethanyoumans@outlook.com",
+        "github": "https://github.com/ETYoumans",
+        "linkedin": "https://www.linkedin.com/in/ethan-youmans-201409301/"
+    },
+    "about": "",
+    "skills": {
+        "languages":"",
+        "technologies": "",
+        "concepts": ""
+    },
+    "projects": [
+        {
+            "name": "Crouton iOS Network Logger",
+            "description":"",
+            "tech": [],
+            "image":"",
+            "repo":""
+        },
+        {
+            "name":"",
+            "description":"",
+            "tech": [],
+            "image":"",
+            "repo":""
+        }
+    ],
+    "educaton": [
+        {
+            "school":"University of Florida",
+            "degree":"B.S. Computer Science",
+            "year": "2025"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Undergraduate Research Assistant",
+            "company": "Florida Institute of Cybersecurity",
+            "period": "Jan 2025 - May 2025",
+            "details": [
+                "",
+                ""
+            ]
+        }
+    ]
+
+
+}

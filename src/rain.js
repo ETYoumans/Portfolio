@@ -1,4 +1,4 @@
-import './rain.css';
+import './css/rain.css';
 
 function Rain() {
   const drops = Array.from({ length: 60 }).map((_, i) => {

@@ -1,14 +1,13 @@
-import './banner.css';
-
+import './css/banner.css'
+import Info from "./info.json"
 
 function Banner() {
-
   return (
     <section className="banner">
       <div className="skyline">
         {Array.from({ length: 50 }).map((_, i) => {
-          const width = 20 + Math.random() * 100; // wider buildings
-          const height = 40 + Math.random() * 60; // percentage of banner height
+          const width = 20 + Math.random() * 100;
+          const height = 40 + Math.random() * 60;
           return (
             <div
               key={i}
@@ -23,9 +22,9 @@ function Banner() {
       </div>
 
       <div className="banner-content">
-        <h1 className="banner-name">ETHAN YOUMANS</h1>
-        <h2 className="banner-tagline">Overly Confident Programmer</h2>
-        <p className="banner-buzzwords">System Architecture • Applied Algorithms • OOP • Full-Stack Development • ML</p>
+        <h1 className="banner-name">{Info.basics.name}</h1>
+        <h2 className="banner-tagline">{Info.basics.title}</h2>
+        <p className="banner-buzzwords">{Info.basics.subtitle}</p>
       </div>
     </section>
   );
