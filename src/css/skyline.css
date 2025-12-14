@@ -1,0 +1,27 @@
+.skyline {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+  z-index: 0;
+}
+
+.building {
+  background: #11002c;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.building::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 6px; 
+  background: inherit;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}

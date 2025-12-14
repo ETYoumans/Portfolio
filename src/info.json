@@ -2,12 +2,22 @@
     "basics": {
         "name": "Ethan Youmans",
         "title": "Overly Confident Programmer",
-        "subtitle": "System Architecture • Applied Algorithms • OOP • Full-Stack Development • ML",
+        "subtitle": "system architecture • mobile apps • full stack • machine learning",
         "email": "mailto:ethanyoumans@outlook.com",
         "github": "https://github.com/ETYoumans",
         "linkedin": "https://www.linkedin.com/in/ethan-youmans-201409301/"
     },
-    "about": "",
+    "about": [
+        "Sometimes I focus on building projects that are useful and meaningful.",
+        "Other times, I do it simply because I can.",
+        "Regardless, I keep my work clean and simple.",
+        "So that it can outlive me.",
+        "",
+        "",
+        "",
+        "",
+        "Scroll further to learn more."
+    ],
     "skills": {
         "languages":"",
         "technologies": "",
