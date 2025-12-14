@@ -8,10 +8,10 @@
         "linkedin": "https://www.linkedin.com/in/ethan-youmans-201409301/"
     },
     "about": [
-        "Sometimes I focus on building projects that are useful and meaningful.",
-        "Other times, I do it simply because I can.",
-        "Regardless, I keep my work clean and simple.",
-        "So that it can outlive me.",
+        "Sometimes, I focus on building projects that are useful and meaningful.",
+        "Other times, I do it simply because I think it is fun.",
+        "Regardless, I keep my work clean and simple,",
+        " so that it can outlive me.",
         "",
         "",
         "",
@@ -19,25 +19,49 @@
         "Scroll further to learn more."
     ],
     "skills": {
-        "languages":"",
-        "technologies": "",
-        "concepts": ""
+        "languages":["C++","Python","Swift","JavaScript","C#","Lua","Java"],
+        "technologies": ["React","Node.js","XCode","Electron","Pytorch","Wireshark","Linux"],
+        "concepts": ["App Development","System Architecture","Machine Learning","Network Analysis","UI/UX Design","Full Stack Development","Cybersecurity"]
     },
     "projects": [
         {
             "name": "Crouton iOS Network Logger",
-            "description":"",
-            "tech": [],
-            "image":"",
-            "repo":""
+            "description":"In collaboration with FICS, I lead a team of five students in developing Crouton,an open-source iOS network logging. Crouton leverages Apple's Network Extensions framework to capture and log network traffic directly on iOS devices. We designed Crouton with a focus on privacy and transparency, ensuring that non-technical users can easily understand what data is being collected, what it is used for, and why we need it. Crouton empowers users to take control of their network data while providing researchers with valuable insights into mobile network behavior. \n\nThis is part one of a larger project my senior project team, SALADS, worked on. The goal of SALADS was to create a comprehensive system victims of abuse can rely on to detect signs of digital stalking and harassment.",
+            "tech": ["Swift", "iOS", "Network Extensions"],
+            "image":"./imgs/MonitorDetailView.png",
+            "link":"https://github.com/ETYoumans/CIS4914_Salads_App"
         },
         {
-            "name":"",
-            "description":"",
-            "tech": [],
+            "name": "CLI Tool for Real-time Location Access Detection",
+            "description":"As the second part of the SALADS project, I lead my team in the development of a command-line interface (CLI) tool designed to monitor and detect access of the user's location data in real-time. My primary focus on this project was the architecture and feature processing pipeline of the tool. \n\n Our ML model was trained on flow patterns extracted from our own dataset, using bags of packets. Instead of analyzing individual packets, we ignored the payloads and focused on metadata and interpacket arrival times. Using this approach, we were able to achieve a high accuracy and a throughput of 250k packets per second (laptop GPU), making it suitable for real-time applications. \n\n This tool is a proof of concept that demonstrates the feasibility of real-time location access detection using machine learning techniques. The long-term goal of this project is to migrate this functionality into a mobile application, providing users with a powerful tool to monitor and protect their location privacy on their devices.",
+            "tech": ["Swift","Pytorch","Machine Learning","CLI"],
             "image":"",
-            "repo":""
+            "link":"https://github.com/LukeSutor/CIS4914_Salads_ML/"
+        },
+        {
+            "name": "Sudoku Coloring",
+            "description":"I worked on a custom algorithm to solve Sudoku puzzles by converting a puzzle to a graph coloring problem. Each cell in the Sudoku grid is represented as a vertex in the graph, along with vertices for each possible number (1-9). Edges are added between vertices to represent the constraints of Sudoku. \n\n I created two algorithms to solve the puzzles. The first is a less accurate proof of concept greedy algorithm, which fails on 9 by 9 puzzles. The other algorithm I made was inspired by Wave Function Collapse, where we keep track of how many options each cell has remaining, and use that to inform our next steps.",
+            "tech": ["Python","Graph Theory","Coloring Algorithms"],
+            "image":"./imgs/4by4.gif",
+            "link":"https://github.com/ETYoumans/SudokuColoring"
+        },
+        {
+            "name":"Gaming Skill Tree",
+            "description":"I created a full stack desktop application using Electron and React, where users can turn a list of games into a skill tree. Each game is represented as a node, which will expose more nodes when unlocked and completed. The application also dynamically fetches images from Steam and RAWG to make the experience more visually appealing.\n\n This project may eventually be expanded into a web application, but for now it remains a desktop application. It does have a stable release, so feel free to check it out!",
+            "tech": ["React","Electron","UI/UX Design","Data Structures"],
+            "image":"./imgs/skilltree.jpeg",
+            "link":"https://github.com/ETYoumans/GameSkillTree"
+        },
+        {
+            "name":"Hollow Knight: HunterSwap",
+            "description":"Building off of HKMP and TheHuntIsOn, I added a module to these addons, which will dynamically store player states for both Hunter and Speedrunners, which can be swapped at any time. This allows players to play \"Speedrunner vs. Hunters\" style games, except the Hunter can replace the Speedrunner, allowing for a competitive tag speedrun experience. \n\n This project involved modifying existing mods, both of which are open source, and handled the online functionality (HKMP) as well as a \"Speedrunner vs. Hunter\" game mode (TheHuntIsOn). This builds off the architecture, provided by the talented HK modding community, to expand on the existing functionality. \n\n This project is currently still in progress, with plans to add more features and polish the experience. It will not be released until it is polished and tested throughly.",
+            "tech": ["In-Progress","C#","Client-Server Architecture","Game Development"],
+            "image":"",
+            "link":""
         }
+    ],
+    "bio": [
+        ""
     ],
     "educaton": [
         {
@@ -49,10 +73,10 @@
     "experience": [
         {
             "role": "Undergraduate Research Assistant",
-            "company": "Florida Institute of Cybersecurity",
+            "company": "UF: Florida Institute of Cybersecurity",
             "period": "Jan 2025 - May 2025",
             "details": [
-                "",
+                "I worked as an undergraduate research assistant at FICS, focusing on reverse engineering and network analysis of mobile location sharing applications. My primary responsibilities included developing experiments to analyze network traffic patterns and identifying potential privacy vulnerabilities in these applications.",
                 ""
             ]
         }

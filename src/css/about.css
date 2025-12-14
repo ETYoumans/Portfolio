@@ -5,8 +5,54 @@
     justify-content: center;
     align-items: center;
     position:relative;
+    padding-bottom: 20vh;
+    transition: opacity 500ms ease;
 }
 
 .about p {
     margin: 1rem 0;
+}
+
+.about-line {
+    transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 500ms ease, transform 500ms ease;
+    will-change: opacity, transform;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-item {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 600ms ease, transform 600ms ease;
+    will-change: opacity, transform;
+}
+
+.visible .fade-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.visible .fade-item.delay-0 { transition-delay: 0ms; }
+.visible .fade-item.delay-1 { transition-delay: 80ms; }
+.visible .fade-item.delay-2 { transition-delay: 160ms; }
+.visible .fade-item.delay-3 { transition-delay: 240ms; }
+.visible .fade-item.delay-4 { transition-delay: 320ms; }
+.visible .fade-item.delay-5 { transition-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-section,
+    .fade-item,
+    .visible .fade-item {
+        transition: none;
+        transform: none;
+    }
 }

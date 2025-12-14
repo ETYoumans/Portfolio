@@ -5,6 +5,9 @@ import Banner from './banner.js';
 import Rain from './rain.js';
 import About from './about.js'
 import Skyline from './skyline.js';
+import Projects from './projects.js';
+import Skills from './skills.js';
+import Bio from './bio.js';
 
 function App() {
   return(
@@ -15,6 +18,13 @@ function App() {
       <Skyline />
       <Banner />
       <About />
+      
+      <Projects />
+      <Skills />
+      <div className="section-divider" />
+      <Bio />
+
+
       
       <Foot />
       <a href="https://github.com/ETYoumans/CornerCat/tree/main"><Cat /></a>
