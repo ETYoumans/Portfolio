@@ -58,7 +58,6 @@
     }
 }
 
-/* Responsive text scaling for small screens */
 @media (max-width: 768px) {
     .about {
         padding-bottom: 15vh;

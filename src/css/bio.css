@@ -7,22 +7,23 @@
     flex-direction: column;
     gap: 1.25rem;
     position: relative;
-    z-index: 2; /* ensure above skyline */
+    z-index: 2;
 }
 
 .bio-intro {
     display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
+    gap: 2rem;
+    align-items: center;
 }
 
-.bio-photo-placeholder {
-    width: 220px;
-    height: 260px;
+.bio-photo {
+    width: 320px;
+    height: 380px;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.12);
-    border: 2px dashed rgba(255, 255, 255, 0.35);
+    object-fit: cover;
     flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    margin: 0 auto;
 }
 
 .bio-text {
@@ -43,7 +44,7 @@
 
 .bio-personal-text {
     flex: 1;
-    color: #fff; /* pure white for readability */
+    color: #fff;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -91,10 +92,12 @@
         order: 1;
     }
 
-    .bio-photo-placeholder {
+    .bio-photo {
         width: 100%;
         max-width: 320px;
-        height: 260px;
+        height: auto;
+        max-height: 60vh;
+        object-fit: contain;
         margin: 0 auto;
         order: 2;
     }

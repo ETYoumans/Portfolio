@@ -1,12 +1,13 @@
 import React from 'react'
 import './css/bio.css'
 import mycats from './imgs/mycats.jpg'
+import person from './imgs/person.jpg'
 
 function Bio() {
 	return (
 		<section className="bio" id="bio">
 			<div className="bio-intro">
-				<div className="bio-photo-placeholder" aria-label="Your photo placeholder" />
+				<img src={person} alt="Ethan Youmans" className="bio-photo" />
 				<div className="bio-text">
 					<p>
 						I graduated from the University of Florida with a B.S. in Computer Science.

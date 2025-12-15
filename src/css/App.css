@@ -90,16 +90,15 @@ p {
   bottom: 0;
 }
 
-/* Section divider between Skills and Bio */
 .section-divider {
   width: 60vw;
-  max-width: 900px; /* match project panel max width */
+  max-width: 900px;
   height: 4px;
-  margin: 4vh auto; /* center within page */
-  background: rgba(255, 255, 255, 0.55); /* solid semi-transparent like panels */
+  margin: 4vh auto;
+  background: rgba(255, 255, 255, 0.55);
   border-radius: 2px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.45);
   position: relative;
-  z-index: 2; /* ensure it sits above fixed skyline */
+  z-index: 2;
 }
