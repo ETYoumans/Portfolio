@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.ca8322e8.css",
+    "main.js": "/Portfolio/static/js/main.496d96b2.js",
+    "static/media/wfcAlgorithm.mp4": "/Portfolio/static/media/wfcAlgorithm.3ea11627f8f94ba6b5c6.mp4",
+    "static/media/catan.png": "/Portfolio/static/media/catan.559691ab5ac2062027d0.png",
+    "static/media/mycats.jpg": "/Portfolio/static/media/mycats.5e7e29b9489f93e5c2da.jpg",
+    "static/media/skilltree.jpeg": "/Portfolio/static/media/skilltree.87bf5c0c4809b970d80d.jpeg",
+    "static/media/sudoku.png": "/Portfolio/static/media/sudoku.5204353347daf3c4170d.png",
+    "static/media/4by4.gif": "/Portfolio/static/media/4by4.f83822c9cc5cfdd39e44.gif",
+    "static/media/MonitorDetailView.png": "/Portfolio/static/media/MonitorDetailView.ed240c5f91b6f0c16aa0.png",
+    "static/media/YoumansEthanResume.pdf": "/Portfolio/static/media/YoumansEthanResume.c88f8b1d14f8c2ae43c6.pdf",
+    "index.html": "/Portfolio/index.html",
+    "main.ca8322e8.css.map": "/Portfolio/static/css/main.ca8322e8.css.map",
+    "main.496d96b2.js.map": "/Portfolio/static/js/main.496d96b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca8322e8.css",
+    "static/js/main.496d96b2.js"
+  ]
+}
