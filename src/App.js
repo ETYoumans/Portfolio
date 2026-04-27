@@ -13,8 +13,9 @@ function App() {
   return(
     <div className="body">
 
+      
       <Rain />
-      <Rain />
+
       <Skyline />
       <Banner />
       <About />

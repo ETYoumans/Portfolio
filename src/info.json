@@ -1,7 +1,7 @@
 {
     "basics": {
         "name": "Ethan Youmans",
-        "title": "Overly Confident Programmer",
+        "title": "Software Engineer",
         "subtitle": "system architecture • mobile apps • full stack • machine learning",
         "email": "mailto:ethanyoumans@outlook.com",
         "github": "https://github.com/ETYoumans",
@@ -9,11 +9,12 @@
         "resume": "/YoumansEthanResume.pdf"
     },
     "about": [
-        "Sometimes, I focus on building projects that are useful and meaningful.",
-        "Other times, I do it simply because I think it is fun.",
-        "Regardless, I keep my work clean and simple,",
-        " so that it can outlive me.",
+        "I build systems that are meant to be understood and extended.",
         "",
+        "From user experience to real-time pipelines and OS-integrated tools, ",
+        "I focus on turning structured ideas into modular software with clear, inspectable behavior.",
+        "",
+        "I prefer explicit design over black-box abstraction, especially in systems that grow over time.",
         "",
         "",
         "",
@@ -27,38 +28,61 @@
     "projects": [
         {
             "name": "Crouton iOS Network Logger",
-            "description":"In collaboration with FICS, I lead a team of five students in developing Crouton,an open-source iOS network logging. Crouton leverages Apple's Network Extensions framework to capture and log network traffic directly on iOS devices. We designed Crouton with a focus on privacy and transparency, ensuring that non-technical users can easily understand what data is being collected, what it is used for, and why we need it. Crouton empowers users to take control of their network data while providing researchers with valuable insights into mobile network behavior. \n\nThis is part one of a larger project my senior project team, SALADS, worked on. The goal of SALADS was to create a comprehensive system victims of abuse can rely on to detect signs of digital stalking and harassment.",
+            "description": "Crouton is an open-source iOS network logging system that captures and records device-level network traffic using Apple’s Network Extensions framework.\n\n I led a team of five students in designing and implementing the core system architecture for capturing, structuring, and exposing network events from the OS-level logging layer to the application frontend.\n\n The system transforms raw network activity into structured, queryable records to enable consistent analysis and visualization of device traffic in real time.\n\n This project was developed as part of a senior capstone (SALADS), focused on building systems for detecting patterns of digital stalking and harassment.",
             "tech": ["Swift", "iOS", "Network Extensions"],
             "image":"./imgs/MonitorDetailView.png",
-            "link":"https://github.com/ETYoumans/CIS4914_Salads_App"
+            "link":"https://github.com/ETYoumans/CIS4914_Salads_App",
+            "layout":"row",
+            "imageAspect": "9/16",
+            "imageFit": "contain",
+            "imageWidth": "10%",
+            "imageHeight": "100%"
+        },
+        {
+            "name": "Chess Background System",
+            "description": "A real-time rule-based chess simulation system that runs continuously in the background and renders live gameplay directly to the desktop wallpaper.\n\n Instead of using a traditional search-based chess engine, I designed a fully interpretable decision system built around modular conditions and filters that define behavior through explicit, human-readable rules.\n\n The system operates as a decision pipeline: it evaluates all legal moves, applies rule-based constraints in sequence, and selects actions dynamically. Game state is persisted through a backend database, enabling long-running matches across sessions.\n\n A custom rendering pipeline converts each board state into an image and updates the Windows desktop wallpaper in real time, producing a continuously evolving simulation of gameplay.\n\n This project explores alternative rule-based system design by prioritizing interpretability, modularity, and full-stack system integration over traditional engine-based evaluation methods.",
+            "tech": ["Python", "python-chess", "Supabase", "PIL", "System Design", "Game Design", "Windows API"],
+            "image": "./imgs/chess_background.png",
+            "link": "https://github.com/ETYoumans/ChessBackground",
+            "layout":"column",
+            "imageAspect": "16/9",
+            "imageFit": "contain",
+            "imageWidth": "80%",
+            "imageHeight": "auto"
         },
         {
             "name": "CLI Tool for Real-time Location Access Detection",
-            "description":"As the second part of the SALADS project, I lead my team in the development of a command-line interface (CLI) tool designed to monitor and detect access of the user's location data in real-time. My primary focus on this project was the architecture and feature processing pipeline of the tool. \n\n Our ML model was trained on flow patterns extracted from our own dataset, using bags of packets. Instead of analyzing individual packets, we ignored the payloads and focused on metadata and interpacket arrival times. Using this approach, we were able to achieve a high accuracy and a throughput of 250k packets per second (laptop GPU), making it suitable for real-time applications. \n\n This tool is a proof of concept that demonstrates the feasibility of real-time location access detection using machine learning techniques. The long-term goal of this project is to migrate this functionality into a mobile application, providing users with a powerful tool to monitor and protect their location privacy on their devices.",
+            "description": "This project is a command-line system for real-time detection of applications accessing user location data, developed as part of the SALADS system.\n\n I designed the system architecture and feature extraction pipeline for processing network flow data, building a lightweight machine learning model trained on packet metadata and inter-arrival timing rather than raw payload inspection.\n\n The system performs high-throughput analysis of network traffic in real time, processing up to 250k packets per second on a laptop GPU, making it suitable for continuous monitoring workloads.\n\n This project serves as a proof-of-concept for scalable, privacy-sensitive network telemetry analysis, with future work focused on integration into mobile and OS-level environments.",
             "tech": ["Swift","Pytorch","Machine Learning","CLI"],
             "image":"",
-            "link":"https://github.com/LukeSutor/CIS4914_Salads_ML/"
+            "link":"https://github.com/LukeSutor/CIS4914_Salads_ML/",
+            "layout":"",
+            "imageAspect": "",
+            "imageFit": "",
+            "imageHeight": ""
         },
         {
             "name": "Sudoku Coloring",
-            "description":"I worked on a custom algorithm to solve Sudoku puzzles by converting a puzzle to a graph coloring problem. Each cell in the Sudoku grid is represented as a vertex in the graph, along with vertices for each possible number (1-9). Edges are added between vertices to represent the constraints of Sudoku. \n\n I created two algorithms to solve the puzzles. The first is a less accurate proof of concept greedy algorithm, which fails on 9 by 9 puzzles. The other algorithm I made was inspired by Wave Function Collapse, where we keep track of how many options each cell has remaining, and use that to inform our next steps.",
+            "description":"I implemented a Sudoku solver by modeling the puzzle as a graph coloring problem, where each cell is represented as a vertex and edges encode Sudoku constraints between cells and candidate values.\n\n I designed and implemented two solving strategies on top of this representation. The first is a greedy heuristic-based approach that prioritizes constraint satisfaction but fails on full 9×9 complexity cases.\n\n The second approach is inspired by Wave Function Collapse, where each cell maintains a dynamic set of possible values, and the algorithm iteratively collapses possibilities based on constraint propagation and remaining entropy.\n\n This project explores constraint-based problem solving through graph modeling and heuristic vs propagation-based algorithm design tradeoffs.",
             "tech": ["Python","Graph Theory","Coloring Algorithms"],
             "image":"./imgs/4by4.gif",
-            "link":"https://github.com/ETYoumans/SudokuColoring"
-        },
-        {
-            "name":"Gaming Skill Tree",
-            "description":"I created a full stack desktop application using Electron and React, where users can turn a list of games into a skill tree. Each game is represented as a node, which will expose more nodes when unlocked and completed. The application also dynamically fetches images from Steam and RAWG to make the experience more visually appealing.\n\n This project may eventually be expanded into a web application, but for now it remains a desktop application. It does have a stable release, so feel free to check it out!",
-            "tech": ["React","Electron","UI/UX Design","Data Structures"],
-            "image":"./imgs/skilltree.jpeg",
-            "link":"https://github.com/ETYoumans/GameSkillTree"
+            "link":"https://github.com/ETYoumans/SudokuColoring",
+            "layout":"row",
+            "imageAspect": "1/1",
+            "imageFit": "contain",
+            "imageWidth": "45%",
+            "imageHeight": "420px"
         },
         {
             "name":"Hollow Knight: HunterSwap",
-            "description":"Building off of HKMP and TheHuntIsOn, I added a module to these addons, which will dynamically store player states for both Hunter and Speedrunners, which can be swapped at any time. This allows players to play \"Speedrunner vs. Hunters\" style games, except the Hunter can replace the Speedrunner, allowing for a competitive tag speedrun experience. \n\n This project involved modifying existing mods, both of which are open source, and handled the online functionality (HKMP) as well as a \"Speedrunner vs. Hunter\" game mode (TheHuntIsOn). This builds off the architecture, provided by the talented HK modding community, to expand on the existing functionality. \n\n This project is currently still in progress, with plans to add more features and polish the experience. It will not be released until it is polished and tested throughly.",
+            "description":"Built a gameplay extension module on top of existing open-source Hollow Knight multiplayer mods (HKMP and TheHuntIsOn), introducing dynamic player role swapping between “Hunter” and “Speedrunner” states during active online sessions.\n\n Designed and implemented a state management system responsible for tracking, storing, and switching player roles in real time while maintaining consistency across the underlying multiplayer framework.\n\n The system integrates with existing networking and gameplay architectures to extend core mod functionality without modifying base frameworks, enabling a new competitive “tag-speedrun” game mode where player roles can change dynamically during play.\n\n This project extends community-built mod infrastructure and is currently in progress, with additional features and polish planned prior to release.",
             "tech": ["In-Progress","C#","Client-Server Architecture","Game Development"],
             "image":"",
-            "link":""
+            "link":"",
+            "layout":"",
+            "imageAspect": "",
+            "imageFit": "",
+            "imageHeight": "400px"
         }
     ],
     "bio": [
